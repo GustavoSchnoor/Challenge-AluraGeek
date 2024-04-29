@@ -1,0 +1,81 @@
+:root {
+    --font-titulo: "Press Start 2P", system-ui, sans-serif;
+    --font-texto: "IBM Plex Mono", monospace, sans-serif;
+    --background-roxo1: #5300C8;
+    --background-roxo2: #5D04D9;
+    --texto-preto: #000000;
+    --texto-branco: #E5E5E5;
+    --texto-laranja: #E95D44;
+    --texto-azul: #03318C;
+}
+
+body {
+	line-height: 1;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to top, #5300c8, #7b25cc, #8a4ad9);
+}
+
+.geral {
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 1625px;
+    background-color: white;
+}
+
+/* HEADER */
+.cabeçalho {
+    background-color: var(--background-roxo1);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 7px 0.9px #00000040 ;
+}
+
+.logo {
+    display: flex;
+    width: 374px;
+    height: 56px;
+    align-items: center;
+}
+
+.logo__img {
+    width: 138px;
+    height: 56px;
+    background-image: url(../images/heart.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo__titulo {
+    font-family: var(--font-titulo);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--texto-branco);
+}
+
+.logo__titulo > span {
+    color: var(--texto-laranja);
+}
+
+/* PRINCIPAL */
+.principal {
+    display: flex;
+    width: 100%;
+    height: auto;
+    /* padding: 60px, 40px, 60px, 40px; */
+    /* gap: 70px; */
+}
+
+/* SEÇÃO PRODUTOS */
+.secao-produtos {
+
+}
+
+/* FORMULARIO */
+.formulario {
+
+}
