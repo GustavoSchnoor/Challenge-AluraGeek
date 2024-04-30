@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Alura Geek</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
 </head>
@@ -62,7 +63,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="card">
+                    <div class="card">
                         <img class="card__img" src="./images/fallout.png" alt="Imagem stormtrooper">
                         <div class="card-container__info">
                             <div class="card-container__nome">
@@ -73,7 +74,7 @@
                                 <img class="icone-trash" src="./images/trash.png" alt="Ícono de eliminación">
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     
                     
 
@@ -81,14 +82,36 @@
             </section>
 
             <section class="secao-formulario">
-                <h1 class="secao-formulario__titulo">Adicionar Produtos:</h1>
+                <div class="secao-formulario__titulo">
+                    <h1><span>Adicionar</span><br><span>Produto:</span></h1>
+                </div>
                 <form action="GET" class="formulario">
+                    <div class="formulario__nome">
+                        <label for="nome">Nome:</label>
+                        <input class="campo" type="text" name="nome" id="nome" placeholder="Ex: GTA 6"  required title="Preencha o nome do produto desejado">
+                    </div>
+                    <div class="formulario__preco">
+                        <label for="preco">Preço:</label>
+                        <input class="campo" type="number" name="preco" id="preco" placeholder="Ex: 299,90" required title="Coloque o preço completo com vírgula">
+                    </div>
+                    <div class="formulario__link">
+                        <label for="link">Link da imagem:</label>
+                        <input class="campo" type="url" name="link" id="link" placeholder="Ex:[...]gta6-capa.png" required title="Se atente ao link da imagem, geralmente possui final .png/jpg">
+                    </div>
+                    <div class="formulario__final">
+                        <input class="botoes btnAdicionar" type="submit" value="Adicionar">
+                        <input class="botoes btnLimpar" type="reset" value="Limpar">
+                    </div>
 
+                    
                 </form>
             </section>
-            
 
         </main>
+
+        <footer class="rodape__container">
+            <p>Desenvolvido por <a href="https://github.com/GustavoSchnoor" target="_blank">Gustavo Schnoor 🐹</a></p>
+        </footer>
 
     </div> <!--FIM GERAL-->
     

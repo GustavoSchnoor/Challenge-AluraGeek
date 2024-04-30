@@ -3,6 +3,7 @@
     --font-texto: "IBM Plex Mono", monospace, sans-serif;
     --background-roxo1: #5300C8;
     --background-roxo2: #5D04D9;
+    --background-roxo3: #7b25cc;
     --texto-preto: #000000;
     --texto-branco: #E5E5E5;
     --texto-laranja: #E95D44;
@@ -23,7 +24,7 @@ body {
     gap: 40px;
     flex-direction: column;
     width: 1440px;
-    height: 100vh; /*height: 1625px; */
+    /* height: 100vh; height: 1625px; */
     background-color: white;
 }
 
@@ -69,9 +70,8 @@ body {
     display: flex;
     width: 100%;
     height: auto;
-    border: 2px solid black;
     padding: 40px;
-    gap: 70px;
+    gap: 60px;
 }
 
 /* SEÇÃO PRODUTOS */
@@ -80,9 +80,10 @@ body {
     gap: 40px;
     flex-direction: column;
     height: 75vh;
+    max-width: 700px;
 }
 
-.secao-produtos__titulo {
+.secao-produtos__titulo, .secao-formulario__titulo {
     text-align: center;
     font-family: var(--font-titulo);
     font-size: 24px;
@@ -92,6 +93,7 @@ body {
 
 .cards-produtos {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -138,5 +140,69 @@ body {
 }
 
 
-
 /* SEÇÃO FORMULARIO */
+.secao-formulario {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    height: 75vh;
+}
+
+/* .secao-formulario__titulo ( ESTA JUNTO COM O SEÇÃO PRODUTOS TITULO) */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario > div > label {
+    display: block;
+    font-family: var(--font-texto);
+    font-weight: 700;
+    color: #8845db;
+    padding-bottom: 5px;
+}
+
+.formulario__final {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.campo {
+    border: 2px solid var(--background-roxo3);
+    border-radius: 20px;
+    font-family: var(--font-texto);
+    width: 250px;
+    padding: 10px;
+    transition: transform 0.2s ease;
+}
+
+.campo:focus {
+    border: 2px solid var(--background-roxo2);
+    transform: scale(1.05);
+}
+
+.botoes {
+    border-radius: 10px;
+    font-family: var(--font-texto);
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.botoes:hover {
+    transform: scale(1.15);
+}
+
+.btnAdicionar {
+    background-color: #8945dbec;
+    color: var(--texto-branco);
+}
+
+.btnLimpar {
+    color: var(--texto-preto);
+}
+
+/* RODAPÉ */
