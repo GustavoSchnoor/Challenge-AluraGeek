@@ -10,6 +10,18 @@
     --texto-azul: #03318C;
 }
 
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes wave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+    100% { transform: translateY(0); }
+}
+
 body {
 	line-height: 1;
     box-sizing: border-box;
@@ -24,7 +36,6 @@ body {
     gap: 40px;
     flex-direction: column;
     width: 1440px;
-    /* height: 100vh; height: 1625px; */
     background-color: white;
 }
 
@@ -59,6 +70,7 @@ body {
     font-size: 24px;
     font-weight: 400;
     color: var(--texto-branco);
+    cursor: default;
 }
 
 .logo__titulo > span {
@@ -68,15 +80,16 @@ body {
 /* PRINCIPAL */
 .principal {
     display: flex;
-    width: 100%;
+    justify-content: space-evenly;
+    width: 98.5%;
     height: auto;
-    padding: 40px;
-    gap: 60px;
+    
 }
 
 /* SEÇÃO PRODUTOS */
 .secao-produtos {
     display: flex;
+    align-items: center;
     gap: 40px;
     flex-direction: column;
     height: 75vh;
@@ -84,7 +97,7 @@ body {
 }
 
 .secao-produtos__titulo, .secao-formulario__titulo {
-    text-align: center;
+    /* text-align: center; */
     font-family: var(--font-titulo);
     font-size: 24px;
     font-weight: 400;
@@ -94,7 +107,7 @@ body {
 .cards-produtos {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
 }
 
 .card {
@@ -107,6 +120,11 @@ body {
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card__img {
@@ -143,6 +161,7 @@ body {
 /* SEÇÃO FORMULARIO */
 .secao-formulario {
     display: flex;
+    align-items: center;
     gap: 40px;
     flex-direction: column;
     height: 75vh;
@@ -206,3 +225,58 @@ body {
 }
 
 /* RODAPÉ */
+.rodape__container {
+    text-align: center;
+    background-color: var(--background-roxo1);
+    font-family: var(--font-texto);
+    color: var(--texto-branco);
+    margin-top: 86px;
+    padding: 10px;
+}
+
+.rodape__container > p > a {
+    text-decoration: none;
+    color: var(--texto-laranja);
+    font-weight: bold;
+}
+
+.rodape__container > p > a:hover {
+    animation: blink 1.5s infinite;
+}
+
+.rodape__container > p {
+    animation: wave 2s ease-in-out infinite;
+    cursor: default;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+    .secao-produtos {
+        max-width: 600px;
+    }
+
+    .cards-produtos {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .principal {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .secao-produtos {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .cards-produtos {
+        justify-content: center;
+    }
+
+    .secao-formulario {
+        height: auto;
+    }
+
+
+}
