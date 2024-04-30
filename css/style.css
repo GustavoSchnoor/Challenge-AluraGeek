@@ -28,7 +28,7 @@ body {
     display: flex;
     justify-content: center;
     /* background-image: linear-gradient(to top, #5300c8, #7b25cc, #8a4ad9); */
-    background-image:linear-gradient(to top, #000000, rgba(0, 0, 0, 0.952));
+    background-image:linear-gradient(to top, #000000, rgba(0, 0, 0, 0.363));
 }
 
 .geral {
