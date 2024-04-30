@@ -50,12 +50,14 @@ async function addProduct(event) {
 }
 
 async function deleteProduct(productId) {
-    const response = await fetch('http://localhost:3000/produtos/${productId}', {
+    // Fazendo uma busca direta no endpoint produtos, pelo numero ID. Como ele é unico por produto, assim que achar esse ID, será deletado com o metodo DELETE.
+    const response = await fetch(`http://localhost:3000/produtos/${productId}`, {
         method: 'DELETE'
     });
 
+    // Se a resposta foi bem sucedida, significa que o item foi deletado corretamente, sendo assim, agora vamos selecionar no HTML o campo div card que corresponde a esse ID e remover essa div com id respectivo
     if (response.ok) {
-        const productCard = document.querySelector(`.card[data-id="${productId}"]`);
+        const productCard = document.querySelector(`[data-id="${productId}"]`);
         productCard.remove();
     }
 

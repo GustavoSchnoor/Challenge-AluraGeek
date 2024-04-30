@@ -23,12 +23,6 @@
       "preco": "29,90",
       "imagem": "./images/fallout.png",
       "id": 4
-    },
-    {
-      "nome": "Dragons Dogma 2",
-      "preco": "199,90",
-      "imagem": "https://www.dragonsdogma.com/2/assets/images/about_bg-sp.png",
-      "id": 5
     }
   ]
 }
