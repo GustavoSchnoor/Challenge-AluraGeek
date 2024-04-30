@@ -110,6 +110,14 @@ body {
     gap: 15px;
 }
 
+.semProdutos {
+    display: none;
+    font-family: var(--font-texto);
+    font-weight: 500;
+    font-style: italic;
+    animation: blink 3s infinite;
+}
+
 .card {
     display: flex;
     flex-direction: column;

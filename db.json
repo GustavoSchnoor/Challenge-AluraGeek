@@ -1,28 +1,3 @@
 {
-  "produtos": [
-    {
-      "nome": "Stormtrooper",
-      "preco": "49.90",
-      "imagem": "./images/stormtrooper.png",
-      "id": 1
-    },
-    {
-      "nome": "Game Boy",
-      "preco": "89,90",
-      "imagem": "./images/gameboy.png",
-      "id": 2
-    },
-    {
-      "nome": "Baldurs Gate 3",
-      "preco": "119,90",
-      "imagem": "./images/baldursgate.png",
-      "id": 3
-    },
-    {
-      "nome": "Fallout 4",
-      "preco": "29,90",
-      "imagem": "./images/fallout.png",
-      "id": 4
-    }
-  ]
+  "produtos": []
 }
