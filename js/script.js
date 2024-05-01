@@ -40,7 +40,7 @@ async function addProduct(event) {
     event.preventDefault();
     const form = document.querySelector('.formulario');
     const productNome = form.elements['nome'].value;
-    const productPreco = form.elements['preco'].value;
+    const productPreco = form.elements['preco'].value.replace('.', ',');
     const productImagem = form.elements['link'].value;
 
     try {
