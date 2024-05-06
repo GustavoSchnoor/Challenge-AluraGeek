@@ -14,6 +14,3 @@ Olá, bem-vindo ao meu Challenge da Oracle e Alura, onde precisei fazer um site 
 - Utilizei conhecimentos com fetch e função assíncrona para realizar o GET, POST e DELETE
 - Validação básica no campo de formulário
 
-## Desenvolvido por
-
-### Gustavo Schnoor
