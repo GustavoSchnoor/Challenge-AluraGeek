@@ -27,6 +27,7 @@ async function loadProducts() {
                         </div>
                     </div>
                 `;
+                    // poderia ser appendChild, mas achei o insertAdjacentHTML mais bonito :D
                     productsContainer.insertAdjacentHTML('beforeend', card);
         });
     } 
